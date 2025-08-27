@@ -59,6 +59,7 @@ func heal(amount):
 func _process(delta):
 	current_health -= DOT * delta
 	current_health = max(0, current_health)
+	health_changed.emit(current_health)
 	
 	if current_health == 0:
 		print("Player has run out of health!")
