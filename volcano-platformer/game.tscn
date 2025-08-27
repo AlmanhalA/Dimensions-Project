@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkdscdhnaohs7"]
+[gd_scene load_steps=4 format=3 uid="uid://dkdscdhnaohs7"]
 
 [ext_resource type="PackedScene" uid="uid://tc3vi1fhn43u" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://cnphji0al0ln2" path="res://progress_bar.gd" id="2_e2o6t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
 
 [node name="main" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("1_80nbo")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_80nbo")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 9)
 zoom = Vector2(4, 4)
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D"]
+offset_right = 4.0
+offset_bottom = 27.0
+script = ExtResource("2_e2o6t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
