@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal health_changed(current_health)
 
 const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -550.0
 @export var max_health = 100.0
 @export var current_health = 100.0
 @export var DOT = 1.0
