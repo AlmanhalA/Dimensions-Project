@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy8vbcky5l1r2"]
+[gd_scene load_steps=3 format=3 uid="uid://dy8vbcky5l1r2"]
 
 [ext_resource type="Script" uid="uid://noopt5cj2w6r" path="res://scripts/button_2.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://3a2408ifokq7" path="res://assists/free_volcano_tileset/images/Background.png" id="1_ouk20"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,6 +10,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(550, 319.5)
+scale = Vector2(0.382353, 0.27375)
+texture = ExtResource("1_ouk20")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
