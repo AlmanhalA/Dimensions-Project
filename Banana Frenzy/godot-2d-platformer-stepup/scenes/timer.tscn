@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://gcx6fclsgjnl"]
+
+[ext_resource type="Script" uid="uid://bc51nraiikkyw" path="res://node_2d.gd" id="1_g5y8c"]
+[ext_resource type="Script" uid="uid://b8l771yhxs068" path="res://timer.gd" id="2_bi5oq"]
+[ext_resource type="FontFile" uid="uid://cbl4eaj7j5jkr" path="res://assets/fonts/MPLUS1p-Black.ttf" id="3_uktcg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qso1l"]
+font = ExtResource("3_uktcg")
+
+[node name="timers" type="Node2D"]
+script = ExtResource("1_g5y8c")
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("2_bi5oq")
+
+[node name="Label" type="Label" parent="Timer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+label_settings = SubResource("LabelSettings_qso1l")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
